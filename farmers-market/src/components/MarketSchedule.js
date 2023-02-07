@@ -33,6 +33,12 @@ const marketScheduleList = [
      booth: "6D"
   },
   {  
+     day: "Friday",
+     location: "Southeast Portland",
+     hours: "4:00pm - 8:00pm",
+     booth: "2D"
+  },
+  {  
      day: "Saturday",
      location: "Beaverton",
      hours: "10:00am - 1:30pm",
@@ -40,7 +46,8 @@ const marketScheduleList = [
   }
  ];
 
-function MarketSchedule(){
+function MarketSchedule(props){
+   const selectedDay = props.day; // 0-6
   return(
     <React.Fragment>
     <div className="marketSchedule">
@@ -49,7 +56,8 @@ function MarketSchedule(){
       location = {marketDay.location}
       hours = {marketDay.hours}
       booth = {marketDay.booth}
-      key={index} />
+      key={index} 
+      selectedDay ={selectedDay}/>
       )}
     </div>
     </React.Fragment>

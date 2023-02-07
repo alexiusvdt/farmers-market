@@ -2,10 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function MarketDay(props){
+  let selected = 'genericDay';
+  if(props.day.toLowerCase() === props.selectedDay.toLowerCase()) {
+    selected = 'selectedDay';
+  }
   return(
-    <React.Fragment>
-
-    </React.Fragment>
+    <div className={selected}>
+     <h1>{props.day}'s schedule:</h1>
+      <p>We're gonna be at {props.location} between {props.hours} at booth {props.booth} </p>
+    </div>
   );
 }
 

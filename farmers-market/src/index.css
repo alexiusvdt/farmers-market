@@ -5,9 +5,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.marketSchedule {
+  display: flex;
+  flex-wrap: wrap;
+  width: 650px;
+}
+
+.selectedDay {
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  height: 250px;
+  border: 1px solid gray;
+  padding: 15px;
+  box-shadow: 10px 5px 5px red;
+  margin: 10px;
+}
+
+.genericDay{
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  height: 250px;
+  border: 1px solid gray;
+  padding: 15px;
+  box-shadow: 10px 5px 5px rgb(0, 0, 0);
+  margin: 20px;
+}
+
+.hidden {  
+  display: none;
+}
+
+.selected-month {
+  display: block;
+  background-color: antiquewhite;
+}
+
