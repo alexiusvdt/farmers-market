@@ -7,6 +7,10 @@ function DaySelect() {
   const [day, setDay] = useState('');
   const [month, setMonth] = useState('');
   const [date, setDate] = useState('');
+  let dateVsibility = "hiddenDate";
+  if(date != "") {
+    dateVsibility = 'showDate';
+  }
   
   const handleChange = (e) => {
     const momentDate = moment(date, "YYYY-MM-DD")
@@ -18,25 +22,28 @@ function DaySelect() {
     setDate(input);
     console.log(`month: ${momentMonth}, day: ${momentDay}, date: ${date}`);
   };
+  // handleChange();
 
   return (
     <React.Fragment>
-      <div>
+      <div className="dateInput">
         {/* <form onSubmit={handleChange}> */}
           {/* <input type="date" /> */}
           {/* <p>Selected Date: {date}</p> */}
           {/* <p><button type="submit">Submit</button></p> */}
         {/* </form> */}
         <input type="date" value="2023-02-07" onChange={handleChange} />
-        <p>selectedDate: {date}</p>
+
+        {/* <p className={dateVsibility}>Selected Date: {date}</p> */}
+
+        
       </div>
-      <div id="body">
-        <MarketSchedule day={day}/>
-        <SeasonalProduce month={month}/>
+      <div id="body" className="bodyHolder">
+        <div ><MarketSchedule day={day}/></div>
+        <div className="seasonal-produce"><SeasonalProduce month={month}/></div>
       </div>
     </React.Fragment>
     );
 }
-
 
 export default DaySelect;

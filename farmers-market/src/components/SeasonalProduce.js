@@ -3,32 +3,6 @@ import Produce from "./Produce";
 
 function SeasonalProduce(props){
   const selectedMonth = props.month;
-
-  // let assignVisibleState = (selectedMonth) => {
-  //   switch (selectedMonth) {
-  //     case "January":
-  //       seasonalProduceList[0].map((produce, index) =>
-  //         <Produce selection={produce.selection}
-  //           key={index} />
-  //       )
-  //       break;
-  //     case "February":
-  //       let currentlyVisibleState = seasonalProduceList[1].map((produce, index) =>
-  //         <Produce selection={produce.selection}
-  //           key={index} />
-  //       )
-  //       break;
-  //     case "March":
-  //       seasonalProduceList[1].map((produce, index) =>
-  //         <Produce selection={produce.selection}
-  //           key={index} />
-  //       )
-  //       break;
-  //     default:
-
-  //   }
-  // }
-
   return(
     <React.Fragment>
       <h1>Seasonal Produce</h1>
