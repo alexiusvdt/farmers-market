@@ -41,6 +41,9 @@ You may also see any lint errors in the console.
 * `npm run build`
 Runs the application
 
+## Known Bugs
+- Chrome users have issue with the first date selection not working. Will work on second click.
+- date field in form doesn't update, but shows correct information based on date picked.
 
 ## Thanks
  * Dr. Richard Garfield
